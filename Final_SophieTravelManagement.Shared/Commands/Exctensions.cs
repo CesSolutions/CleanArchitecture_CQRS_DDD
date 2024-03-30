@@ -18,8 +18,8 @@ namespace Final_SophieTravelManagement.Shared.Commands
             services.AddSingleton<ICommandDispatcher, InMemoryCommandDispatcher>();
             services.Scan(s => s.FromAssemblies(assembly)
             .AddClasses(c => c.AssignableTo(typeof(ICommandHandler<>)))
-            .AsImplementedInterfaces());
-            //.WithScopedLifetime());
+            .AsImplementedInterfaces()
+            .WithScopedLifetime());
 
             return services;
         }

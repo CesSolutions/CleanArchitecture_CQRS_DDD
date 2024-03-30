@@ -14,8 +14,8 @@ namespace Final_SophieTravelManagement.Application
 
             services.Scan(b => b.FromAssemblies(typeof(ITravelerItemsPolicy).Assembly)
                 .AddClasses(c => c.AssignableTo<ITravelerItemsPolicy>())
-                .AsImplementedInterfaces());
-                //.WithSingletonLifetime());
+                .AsImplementedInterfaces()
+                .WithSingletonLifetime());
 
             return services;
         }
